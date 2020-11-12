@@ -22,11 +22,12 @@ else
     </tr>
     @foreach (var codingEvent in ViewBag.events)
         {
-            <tr>
-                <td>@codingEvent.Id</td>
-                <td>@codingEvent.Name</td>
-                <td>@codingEvent.Description</td>
-            </tr>
+<tr>
+    <td>@codingEvent.Id</td>
+    <td>@codingEvent.Name</td>
+    <td>@codingEvent.Description</td>
+    <td><a asp-controller="Events" asp-action="Edit" asp-route-id="@codingEvent.Id">Edit Event</a></td>
+</tr>
          }
 </table>
 }
